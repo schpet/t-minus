@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'createsend', '~> 0.2'
   s.add_dependency 'strong_parameters'
+  s.add_dependency 'simple_form'
 
   s.add_development_dependency 'bundler', '~> 1'
   s.add_development_dependency 'rspec-rails', '~> 2'

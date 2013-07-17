@@ -10,7 +10,7 @@ class PrelaunchSubscriber < ActiveRecord::Base
   private
 
   def add_to_campaign_monitor
-    list_id = ENV[:CAMPAIGN_MONITOR_LIST_ID]
+    list_id = ENV['CAMPAIGN_MONITOR_LIST_ID']
     CreateSend::Subscriber.add(list_id, email, "", [], true)
   end
 

@@ -35,18 +35,20 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    Object.redefine_const(:PRELAUNCH_CONFIG, {
-      :active => true,
-      :campaign_monitor_api_key => 'somekey',
-      :campaign_monitor_list_id => 'somelistid'
-    })
-    CreateSend.api_key PRELAUNCH_CONFIG[:campaign_monitor_api_key]
+    #Object.redefine_const(:PRELAUNCH_CONFIG, {
+      #:active => true,
+      #:campaign_monitor_api_key => 'somekey',
+      #:campaign_monitor_list_id => 'somelistid'
+    #})
+    ENV[:campaign_monitor_api_key] = 'somekey'
+    ENV[:campaign_monitor_list_id] = 'somelistid'
+    CreateSend.api_key ENV[:campaign_monitor_api_key]
   end
 end
 
-class Module  
-  def redefine_const(name, value)  
-    __send__(:remove_const, name) if const_defined?(name)  
-    const_set(name, value)  
-  end  
+class Module
+  def redefine_const(name, value)
+    __send__(:remove_const, name) if const_defined?(name)
+    const_set(name, value)
+  end
 end

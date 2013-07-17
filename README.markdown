@@ -1,3 +1,10 @@
+# TODO
+
+- support webhooks to update subscription status
+  http://www.campaignmonitor.com/api/getting-started/
+  http://www.campaignmonitor.com/api/webhooks/
+
+
 # T-Minus
 
 T-Minus is a Rails engine and set of generators that make it easier to

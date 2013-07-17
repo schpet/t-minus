@@ -8,7 +8,7 @@
 .container.text-center
   - if @prelaunch_subscriber.present?
     = simple_form_for @prelaunch_subscriber, :url => prelaunch_path do |f|
-      = f.input :email,
+      = f.input :email
       = f.submit 'Add me to the list', class: 'btn'
   - else
     %p

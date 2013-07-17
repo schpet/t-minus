@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 't-minus'
-  s.version = '0.3.1'
+  s.version = '0.4.1'
   s.description = 'Rails engine and generators that make it easier to create a prelaunch page for your application that can collect email addresses of interested visitors.'
   s.summary = s.description
   s.authors = ['John Grimes']

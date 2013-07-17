@@ -15,7 +15,7 @@ class PrelaunchSubscriber < ActiveRecord::Base
   end
 
   def campaign_monitor_configured?
-    ENV[:CAMPAIGN_MONITOR_API_KEY].present? &&
-    ENV[:CAMPAIGN_MONITOR_LIST_ID].present?
+    ENV['CAMPAIGN_MONITOR_API_KEY'].present? &&
+    ENV['CAMPAIGN_MONITOR_LIST_ID'].present?
   end
 end
